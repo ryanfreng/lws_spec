@@ -1,4 +1,4 @@
-lws_spec
+LWS SPEC
 ========
 
-This rspec code tests library.wisc.edu to make sure all searches are running happily.
+This rspiec code tests library.wisc.edu to make sure all searches are running happily. These tests require the rspec, capybara, capybara-mechanise gems.
