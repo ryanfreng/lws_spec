@@ -20,6 +20,8 @@ feature "Should have search tabs" do
   end
 
   scenario "check for books tab" do
+    click_link 'Books'
+    page.should have_content 'our legacy catalog'
   end
   scenario "check for journals tab" do
   end
