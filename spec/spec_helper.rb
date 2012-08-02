@@ -1,5 +1,6 @@
 require 'capybara/rspec'
 require 'capybara/mechanize'
+require 'capybara/webkit'
 
 RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true
@@ -14,4 +15,5 @@ RSpec.configure do |config|
 end
 
 Capybara.default_driver = :mechanize
+Capybara.javascript_driver = :webkit
 Capybara.app_host = "http://library.wisc.edu"
