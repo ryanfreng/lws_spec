@@ -10,7 +10,10 @@ feature "User can navigate snd earch tabs", :js => true do
     
     fill_in 'query', with: 'nature'
     click_on 'Search'
+    # not logged in
     page.should have_content 'Remote Access to Library Resources'
+    # logged in
+    #page.should have_content 'Search Status'
   end
 
   scenario "click books and search 'harry potter'" do
@@ -47,6 +50,24 @@ feature "User can navigate snd earch tabs", :js => true do
     fill_in 'q', with: 'college library'
     click_on 'Search'
     page.should have_content 'College Library (Helen C. White)'
+  end
+end
+
+feature "User selects 'My Accounts' and has all options" do 
+  before { visit '/' }
+
+  scenario "click 'My Accounts' and see list" do
+    click_link 'My Accounts'
+    page.should have_content 'Library'
+    page.should have_content 'Catalog'
+    page.should have_content 'Interlibrary Loan'
+    page.should have_content 'RefWorks'
+    page.should have_content 'EndNote Web'
+    page.should have_content 'Campus'
+    page.should have_content 'My UW'
+    page.should have_content 'WiscMail'
+    page.should have_content 'Learn@UW'
+    page.should have_content 'My WebSpace'
   end
 end
 
