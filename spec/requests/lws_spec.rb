@@ -1,7 +1,7 @@
 # encoding: UTF-8
 require 'spec_helper'
 
-Capybara.app_host = "http://library.wisc.edu"
+#Capybara.app_host = "http://library.wisc.edu"
 
 feature "User can navigate snd earch tabs", :js => true do
   before { visit '/'}
@@ -83,3 +83,5 @@ feature "Should have current year as copyright" do
 
 end
 
+#inserted test comment
+#
