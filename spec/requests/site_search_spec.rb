@@ -45,8 +45,8 @@ feature "User can search and find library data", :js => true do
     fill_in 'search-string', with: 'copyright'
     click_on 'Search'
 
-    page.should have_content "What is Copyright?"
-    page.should have_content "http://researchguides.library.wisc.edu/copyrightfordigitalmedia"
+    page.should have_content "Scholarly Communication and Publishing: Copyright"
+    page.should have_content "http://www.library.wisc.edu/scp/copyright/"
   end
 
 end
