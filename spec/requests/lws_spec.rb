@@ -13,9 +13,9 @@ feature "User can navigate snd earch tabs", :js => true do
     fill_in 'query', with: 'nature'
     click_on 'Search'
     # not logged in
-    page.should have_content 'Remote Access to Library Resources'
+    #page.should have_content 'Remote Access to Library Resources'
     # logged in
-    #page.should have_content 'Search Status'
+    page.should have_content 'Search Status'
   end
 
   scenario "click books and search 'harry potter'" do
